@@ -4,6 +4,14 @@
 
 ### Commands
 
+
+## Linting
+`
+docker-compose run --rm app sh -c "flake8"
+`
+
+
+## Tests
 `
 docker-compose run --rm app sh -c "python manage.py test"
 `
