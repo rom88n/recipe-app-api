@@ -19,3 +19,5 @@ docker-compose run --rm app sh -c "python manage.py test"
 * REST API
 * Swagger
 * Image uploading (+volumes for static files)
+* GitHub Actions
+* Docker Hub
