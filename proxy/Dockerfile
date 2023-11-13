@@ -1,6 +1,10 @@
 FROM nginxinc/nginx-unprivileged:1-alpine
 LABEL maintainer='roman.tsekov88@gmail.com'
 
+# Install PCRE dependencies
+USER root
+RUN apk add --no-cache pcre pcre-dev
+
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 COPY ./uwsgi_params /etc/nginx/duwsgi_params
 COPY ./run.sh /run.sh
